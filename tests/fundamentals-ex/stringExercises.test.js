@@ -21,7 +21,7 @@ describe('Variables can be a string', () => {
         expect(result).toBe('I Love JS');
     });
 
-    test('should return letter', () => {
+    test.skip('should return letter', () => {
         /* Añade las líneas necesarias al test / Modifica la function giveOneLetter para que devuelva la letra g de la variable configurada */
 /*         const dog = ["anselmo","o"]; */
         const dog = "dog";

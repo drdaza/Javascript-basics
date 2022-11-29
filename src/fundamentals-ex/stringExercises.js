@@ -24,8 +24,8 @@ export function giveOneLetter(param1, param2)
     /* Completa la function */
     const separateWord = param1.split("");
 
-    if(separateWord.includes("toString(param2)")){
-        return "param2";
+    if(separateWord.includes(param2)){
+        return param2;
     }
 }
 
