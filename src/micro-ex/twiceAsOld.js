@@ -14,6 +14,7 @@ padre: 42, hijo: 21 -> 0
 */
 
 export function twiceAsOld(dadAge, sonAge)
-{
-    
+{   
+    let operation = dadAge-sonAge*2;
+    return (operation<0) ? operation*-1 : operation;
 }

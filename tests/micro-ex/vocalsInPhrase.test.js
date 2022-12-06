@@ -1,6 +1,6 @@
 import { deleteDuplicity, getPhrase, getVocals, searchVocals } from "../../src/micro-ex/vocalsInPhrase";
 
-describe.skip('Vocals in phrase', () => {
+describe('Vocals in phrase', () => {
 
     test.skip('should return la', () => {
         document.body.innerHTML = /* html */
@@ -25,7 +25,7 @@ describe.skip('Vocals in phrase', () => {
         expect(result).toContain(vocal);
     });
 
-    test('should return a,e,i,o,u', () => {
+    test.skip('should return a,e,i,o,u', () => {
         document.body.innerHTML = /* html */
             `<div>
                 <input id="input-phrase" type="text" value="la le li lo lu">
@@ -37,7 +37,7 @@ describe.skip('Vocals in phrase', () => {
         expect(result).toEqual(vocals);
     });
 
-    test('should return vocals without duplicity', () => {
+    test.skip('should return vocals without duplicity', () => {
         document.body.innerHTML = /* html */
             `<div>
                 <input id="input-phrase" type="text" value="la le li lo lu pa pe pi po pu">
@@ -49,7 +49,7 @@ describe.skip('Vocals in phrase', () => {
         expect(result).toEqual(vocals);
     });
 
-    test('should return only one i', () => {
+    test.skip('should return only one i', () => {
         let list = ['i','i'];
         let result = deleteDuplicity(list);
         expect(result).toEqual(['i']);
@@ -64,10 +64,10 @@ describe.skip('Vocals in phrase', () => {
 
         let vocals = 'e,o';
         let phrase = document.getElementById('input-phrase').value;
-        let vocalsInPhrase = document.getElementById('vocals-in-phrase');
+        /* let vocalsInPhrase = document.getElementById('vocals-in-phrase'); */
         let volcalsList = searchVocals(phrase)
-        let result = getVocals(volcalsList);
-        expect(result).toEqual(vocals);
+        /* let result = getVocals(volcalsList); */
+        expect(volcalsList).toEqual(vocals);
     });
 });
 
