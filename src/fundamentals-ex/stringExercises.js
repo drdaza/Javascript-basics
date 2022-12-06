@@ -29,32 +29,34 @@ export function giveOneLetter(param1, param2)
     }
 }
 
-export function giveTheIndexOfWord()
+export function giveTheIndexOfWord(word)
 {
     const wordToSearch = 'Butterfly';
-    const result = 0;
-    const phrase = "Once upon a time!!!";
-    const array = phrase.split(" ");
-
-        result = array.indexOf("once");
+    let result = 0;
+    const phrase = 'Once upon a time!!!';
+    const array = phrase.split(' ');
+    console.log(array);
+    result= array.indexOf(word);
 
     return result;
 }
 
-export function replaceFishWords()
+export function replaceFishWords(word)
 {
     let phrase = 'Give a Man a Fish';
+
+    return phrase.replace('Fish',word);
     
 }
 
-export function giveAllLettersInUppercase()
+export function giveAllLettersInUppercase(word)
 {
-    let phrase = 'Ride Him, Cowboy!';
-    
+    let phrase = word;
+    return phrase.toUpperCase()
 }
 
-export function removeWhiteSpaces()
+export function removeWhiteSpaces(word)
 {
-    let phrase = '    Hands Down    ';
-    
+    let phrase = word;
+    return phrase.trim();
 }

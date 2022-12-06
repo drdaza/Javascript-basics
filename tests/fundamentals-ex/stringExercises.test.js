@@ -1,6 +1,6 @@
-import { concatenateStrings, giveOneLetter, returnAString, returnHello } from "../../src/fundamentals-ex/stringExercises";
+import { concatenateStrings, giveAllLettersInUppercase, giveOneLetter, giveTheIndexOfWord, removeWhiteSpaces, replaceFishWords, returnAString, returnHello } from "../../src/fundamentals-ex/stringExercises";
 
-describe('Variables can be a string', () => {
+describe.skip('Variables can be a string', () => {
     test.skip('should say Hello', () => {
         /* agrega la línea que falta */
         const word = "Hello";
@@ -25,32 +25,37 @@ describe('Variables can be a string', () => {
         /* Añade las líneas necesarias al test / Modifica la function giveOneLetter para que devuelva la letra g de la variable configurada */
 /*         const dog = ["anselmo","o"]; */
         const dog = "dog";
-        const letra = "o";
+        const letra = "d";
         const result = giveOneLetter(dog,letra);
-        expect(result).toBe("o");
+        expect(result).toBe("d");
     });
 
     test.skip('should return -1', () => {
         /* Añade las líneas necesarias al test / Modifica la function giveTheIndexOfWord */
-
-        expect(giveTheIndexOfWord()).toEqual(-1);
+        let word = 'Butterfly';
+        const result = giveTheIndexOfWord(word);
+        
+        expect(result).toBe(-1);
     });
 
     test.skip('should return "Give a Man a Pussy Cat" ', () => {
         /* Añade las líneas necesarias al test / Modifica la function replaceFishWords */
-
-        expect().toBe('Give a Man a Pussy Cat');
+        const wordRemplace = 'Pussy Cat';
+        const result = replaceFishWords(wordRemplace);
+        expect(result).toBe('Give a Man a Pussy Cat');
     });
 
     test.skip('should return "RIDE HIM, COWBOY!"', () => {
         /* Añade las líneas necesarias al test / Modifica la function giveAllLettersInUppercase */
-        
-        expect().toBe('RIDE HIM, COWBOY');
+        let word = 'Ride Him, Cowboy!';
+        const result = giveAllLettersInUppercase(word);
+        expect(result).toBe('RIDE HIM, COWBOY!');
     });
 
     test.skip('should return "Hands Down"', () => {
         /* Añade las líneas necesarias al test y modifica la function removeWhiteSpace */
-
-        expect().toBe('Hands Down');
+        let word = '    Hands Down    ';
+        const result = removeWhiteSpaces(word)
+        expect(result).toBe('Hands Down');
     });
 });
